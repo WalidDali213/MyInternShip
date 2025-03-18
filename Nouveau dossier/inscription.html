@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - MyInternship</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header {
+            background: #333;
+            padding: 15px 0;
+        }
+        nav {
+            width: 80%;
+            margin: auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+        }.menu li a.active {
+            border-bottom: 3px solid blue;
+        }
+        .menu li a:hover {
+            color: lightblue;
+        }
+        .account {
+            margin-left: auto;
+        }
+
+        .form-container {
+            width: 40%;
+            margin: 40px auto;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkblue;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        /* Pied de page */
+        footer {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer-container .column {
+            width: 20%;
+        }
+        .footer-container h4 {
+            margin-bottom: 10px;
+        }
+        .footer-container a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-container a:hover {
+            color: lightgray;
+        }
+
+</style>
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" class="active">Offres</a></li>
+                <li><a href="#">Entreprises</a></li>
+                <li class="account">
+                   <a href="#">👤 Mon compte</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Inscrivez-vous et ouvrez les portes de l'opportunité</h2>
+            <form>
+                <label>Statut*</label>
+                <select required>
+                    <option value="">Sélectionner votre statut</option>
+                    <option value="etudiant">Etudiant</option>
+                    <option value="pilote">Pilote</option>
+                    <option value="administrateur">Administrateur</option>
+                </select>
+
+                <label>Prénom*</label>
+                <input type="text" required>
+
+                <label>Nom*</label>
+                <input type="text" required>
+
+                <label>Email*</label>
+                <input type="email" required>
+
+                <label>Mot de passe*</label>
+                <input type="password" required>
+
+                <label>Confirmation du mot de passe*</label>
+                <input type="password" required>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="conditions">
+                    <label for="conditions">J'accepte les conditions d'utilisation</label>
+                </div>
+
+                <button type="submit">M'inscrire</button>
+                
+        </form>
+        <p>Déjà un compte ? <a href="#">Connectez-vous</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="column">
+                <h4>Étudiants</h4>
+                <a href="#">S'inscrire</a>
+                <a href="#">Chercher une offre de stage</a>
+                
+            </div>
+            <div class="column">
+                <h4>Entreprises</h4>
+                <a href="#">Notre offre entreprise</a>
+            </div>
+            <div class="column">
+                <h4>MyInternship</h4>
+                <a href="#">A propos</a>
+                <a href="#">Nous rejoindre</a>
+            </div>
+        </div>
+        <p>@ 2025 MyInternship - Site de recherche de stage</p>
+    </footer>
+    
+</body>
+</html>

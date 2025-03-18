@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres de stage</title>
+</head>
+<style>
+    body {
+        background: #f8f8f8 ;
+        }
+    header {
+        background:#FFFF00 ;
+        padding: 15px 0 ;
+        text-align: center ;
+    }
+    .menu a {
+        color: blue;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size:18px;
+    }
+    .container{
+        text-align: center;
+    }
+    .search-container {
+        text-align: center;
+        margin: 30px ;
+    }
+    input[type="text"] {
+            width: 50% ;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    .Offers{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+
+    } 
+    .offer {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+    }
+    .offer h3 {
+            margin-bottom: 10px;
+        }
+    .offer p {
+            font-size: 14px;
+            color: gray;
+        }
+        .apply {
+            display: block;
+            text-align: center;
+            background: blue;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="#">Accueil</a>
+            <a href="#">Offres</a>
+            <a href="#">Entreprises</a>
+            <a href="#">Mon compte</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Bienvenue sur MyInternship</h1>
+        <p>Trouvez votre stage en un clic.</p>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Rechercher un stage...">
+
+    </div>
+    <section class="Offers">
+        <div class="offer">
+            <h3>Stage développeur web</h3>
+            <p>Entreprise: KPMG</p>
+            <p>Durée: 6 mois</p>
+            <a href="#" class="apply">Postuler</a>
+        </div>
+        <div class="offer">
+            <h3>Stagiaire (h/f) - Réseau - Déploiement</h3>
+            <p>Entreprise: SFR</p>
+            <p>Durée: 4 mois</p>
+            <a href="#" class="apply">Postuler</a>
+        </div>
+        <div class="offer">
+            <h3>Cybersécurité</h3>
+            <p>Entreprise: REA</p>
+            <p>Durée: 5 mois</p>
+            <a href="#" class="apply">Postuler</a>
+        </div>
+    </section>
+<footer>
+    <p>@ 2025 MyInternship - Trouvez votre stage en un clic</p>
+</footer>
+    
+</body>
+</html>
