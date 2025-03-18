@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - Administrateur | MyIntership</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS spécifique pour le dashboard -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="container header-content">
+        <div class="logo"><a href="index.html">MyIntership</a></div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="companies.html">Entreprises</a></li>
+            <li><a href="offers.html">Offres</a></li>
+            <li><a href="users.html">Utilisateurs</a></li>
+            <li><a href="logout.html">Déconnexion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="dashboard-container container">
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#">Résumé</a></li>
+          <li><a href="#">Statistiques globales</a></li>
+          <li><a href="#">Gestion entreprises</a></li>
+          <li><a href="#">Gestion offres</a></li>
+          <li><a href="#">Gestion utilisateurs</a></li>
+        </ul>
+      </aside>
+      <main class="dashboard-main">
+        <h1>Bienvenue, Administrateur</h1>
+        <section class="dashboard-section">
+          <h2>Vue d'ensemble</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>Entreprises inscrites</h3>
+              <p>45</p>
+            </div>
+            <div class="stat-card">
+              <h3>Offres de stage</h3>
+              <p>120</p>
+            </div>
+            <div class="stat-card">
+              <h3>Utilisateurs actifs</h3>
+              <p>350</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="dashboard-footer">
+      <div class="container">
+        <p>&copy; 2025 MyIntership. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

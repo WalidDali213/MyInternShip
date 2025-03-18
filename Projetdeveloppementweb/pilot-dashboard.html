@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - Pilote de Promotion | MyIntership</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS spécifique pour le dashboard -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="container header-content">
+        <div class="logo"><a href="index.html">MyIntership</a></div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="pilot-dashboard.html">Tableau de bord</a></li>
+            <li><a href="demandes.html">Demandes de stage</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="logout.html">Déconnexion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="dashboard-container container">
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#">Demandes récentes</a></li>
+          <li><a href="#">Statistiques</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Paramètres</a></li>
+        </ul>
+      </aside>
+      <main class="dashboard-main">
+        <h1>Bonjour, [Nom du Pilote]</h1>
+        <section class="dashboard-section">
+          <h2>Suivi des demandes de stage</h2>
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Étudiant</th>
+                <th>Offre</th>
+                <th>Entreprise</th>
+                <th>Statut</th>
+                <th>Date de candidature</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Étudiant A</td>
+                <td>Stage Développeur</td>
+                <td>Entreprise A</td>
+                <td>En attente</td>
+                <td>12/03/2025</td>
+              </tr>
+              <tr>
+                <td>Étudiant B</td>
+                <td>Stage Marketing</td>
+                <td>Entreprise B</td>
+                <td>Accepté</td>
+                <td>09/03/2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <footer class="dashboard-footer">
+      <div class="container">
+        <p>&copy; 2025 MyIntership. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

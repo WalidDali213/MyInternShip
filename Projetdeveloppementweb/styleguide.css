@@ -1,0 +1,27 @@
+
+:root {
+    /* Couleurs principales */
+    --primary-color: #ffd500; /* Jaune */
+    --secondary-color: #0052cc; /* Bleu */
+  
+    /* Couleurs de texte */
+    --text-color: #000000;
+    --text-inverse-color: #ffffff;
+  
+    /* Couleur d'arrière-plan */
+    --background-color: #ffffff;
+  
+    /* Polices */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+  
+    /* Tailles / Espacements */
+    --container-width: 1200px;
+    --section-padding: 60px;
+  
+    /* Boutons */
+    --btn-border-radius: 4px;
+    --btn-font-size: 16px;
+    --btn-padding: 14px 24px;
+  }
+  

@@ -1,0 +1,31 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* Appliquer un rendu plus lisse des polices */
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* Hauteur totale pour html, body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+/* Liens sans soulignement par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Bouton focus visible */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--secondary-color) !important;
+  outline-offset: 2px;
+  outline-style: dashed;
+}

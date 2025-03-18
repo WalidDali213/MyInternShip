@@ -1,0 +1,205 @@
+
+
+/* ========== Layout de base ========== */
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ========== Header ========== */
+  
+  .site-header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo a {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu a {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* ========== Hero ========== */
+  
+  .hero {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--section-padding) 0;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-family: var(--font-secondary);
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  
+  /* ========== Boutons ========== */
+  
+  .btn {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: var(--btn-font-size);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Bouton principal */
+  .btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-inverse-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #003da6;
+  }
+  
+  /* Bouton secondaire */
+  .btn-secondary {
+    background-color: var(--text-inverse-color);
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-inverse-color);
+  }
+  
+  /* ========== Section Features ========== */
+  
+  .features {
+    padding: var(--section-padding) 0;
+    background-color: var(--background-color);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+  
+  .feature-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .feature-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-card h2 {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* ========== Section Call to Action ========== */
+  
+  .call-to-action {
+    background-color: var(--secondary-color);
+    color: var(--text-inverse-color);
+    padding: var(--section-padding) 0;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    font-size: 32px;
+    font-family: var(--font-secondary);
+    margin-bottom: 24px;
+  }
+  
+  /* ========== Footer ========== */
+  
+  .site-footer {
+    background-color: #333;
+    color: var(--text-inverse-color);
+    padding-top: 40px;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-links h3 {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    font-family: var(--font-primary);
+    color: var(--text-inverse-color);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
