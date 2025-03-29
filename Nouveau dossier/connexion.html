@@ -4,153 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>connexion</title>
-</head>
-
-<body>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        .slogan {
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-        body {
-            display: flex;
-            height: 100vh;
-            background: #f8f8f8;
-        }
-        .container {
-            display: flex;
-            width: 100%;
-        }
-        .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.password-container input {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.forgot-password {
-    display: block;
-    text-align: right;
-    font-size: 14px;
-    color: blue;
-    text-decoration: none;
-    margin-bottom: 15px;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
-}
-
-        .left {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-        .right {
-           width: 50%;
-           height: 300px; 
-           background: url('https://cdn.pixabay.com/photo/2019/02/07/11/21/school-3980940_1280.jpg') center/contain no-repeat;
-           border-radius: 10px;
-}
-
-
-
-        .form-container {
-            width: 80%;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .form-container h2 {
-            margin-bottom: 20px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: yellow;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .social-login {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 15px;
-        }
-        .social-login button {
-            width: 45%;
-            background: white;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-        }
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: black;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
+        /* (Ton CSS ici) */
     </style>
 </head>
+
 <body>
-    <br>
     <div class="container">
         <h2 class="slogan">Un seul clic pour retrouver votre espace</h2>
-
         <div class="left">
             <div class="form-container">
                 <h2>Connexion</h2>
-                <label for="email">Email*</label>
-                <input type="email" id="email" placeholder="Entrez votre email" required>
-                
-                <label for="password">Mot de passe*</label>
-                <div class="password-container">
-                    <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
-                    <span class="toggle-password" onclick="togglePassword()">👁</span>
-                </div>
-</div>
+                <form action="connexion.php" method="POST">
+                    <label for="login">Email*</label>
+                    <input type="email" name="login" id="email" placeholder="Entrez votre email" required>
+                    
+                    <label for="password">Mot de passe*</label>
+                    <div class="password-container">
+                        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁</span>
+                    </div>
 
-<a href="#" class="forgot-password">Mot de passe oublié ?</a>
-                <button>Connexion</button>
-                <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    <button type="submit">Connexion</button>
+                </form>
+                <p>Pas encore de compte ? <a href="inscription.php">S'inscrire</a></p>
                 <hr>
                 <p>ou se connecter avec</p>
                 <div class="social-login">
@@ -161,8 +39,18 @@
         </div>
         <div class="right"></div>
     </div>
+
     <footer>
         <p>Notice légale | Conditions d'utilisation | Politique de confidentialité | © MyInternship 2020-2025</p>
     </footer>   
+
+    <script>
+        // Fonction pour afficher/masquer le mot de passe
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            var type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+        }
+    </script>
 </body>
 </html>
