@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
      // Redirection selon le rôle
             if ($user['statut'] == 'administrateur') {
-                header("Location: gestion_pilotes.php?action=list");
+                header("Location: pilotList.php?action=list");
             } else {
                 // Pour pilote ou étudiant, redirigez vers un tableau de bord approprié
                 header("Location: dashboard.php");
