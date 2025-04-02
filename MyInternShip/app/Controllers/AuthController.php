@@ -24,11 +24,7 @@ class AuthController extends Controller {
                         'email'   => $user['email']
                     ];
                     // Redirection selon le rôle
-                    if ($user['statut'] == 'administrateur') {
-                        header("Location: /public/index.php?controller=dashboard&action=index");
-                    } else {
-                        header("Location: /public/index.php?controller=dashboard&action=index");
-                    }
+                    header("Location: /public/index.php?controller=dashboard&action=index");
                     exit();
                 } else {
                     $error = "Mot de passe incorrect";
@@ -42,14 +38,15 @@ class AuthController extends Controller {
     }
     
     public function logout() {
+        session_start();
+        $_SESSION = [];
         session_destroy();
         header("Location: /public/index.php?controller=auth&action=login");
         exit();
     }
 
-    public function register() {  // Ajout correct de la fonction à l'intérieur de la classe
+    public function register() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Connexion à la BDD via le modèle Database déjà défini
             $prenom = trim($_POST["prenom"]);
             $nom = trim($_POST["nom"]);
             $email = trim($_POST["email"]);
@@ -69,12 +66,10 @@ class AuthController extends Controller {
         
             if (!isset($error)) {
                 $userModel = new User();
-                // Vérifier si l'email existe déjà
                 if ($userModel->findByEmail($email)) {
                     $error = "Cet email est déjà utilisé !";
                 } else {
                     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-                    // Insérer l'utilisateur en base
                     $db = Database::getInstance();
                     $stmt = $db->prepare("INSERT INTO utilisateurs (statut, prenom, nom, email, password) VALUES (:statut, :prenom, :nom, :email, :password)");
                     $result = $stmt->execute([
@@ -96,4 +91,3 @@ class AuthController extends Controller {
         $this->render('auth/inscription', ['error' => $error ?? null]);
     }
 }
-?>
